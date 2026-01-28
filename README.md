@@ -1,1 +1,1 @@
-# exman_calculator
+# expert-calculator
