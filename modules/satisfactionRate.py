@@ -56,13 +56,10 @@ def satisfaction_page():
     if combined_df.empty:
         st.info("Tidak terdapat data")
     else:
-        year = ["2025", "2026"]
-        year_selection = year
-        # selectedYear = st.pills("Select Year", year, selection_mode="multi", default="2025")
         options = ["Q1", "Q2", "Q3", "Q4"]
         default_selection = options
         selectedQuarter = st.pills("Select Quarter", options, selection_mode="multi", default=default_selection)
-        # combined_df = combined_df[combined_df["Year"].isin(selectedYear)]
+        
         combined_df = combined_df[combined_df["Quarter"].isin(selectedQuarter)]
         # st.success(f"✅ Data berhasil digabungkan ({len(combined_df)} baris total)")
         st.dataframe(combined_df)
