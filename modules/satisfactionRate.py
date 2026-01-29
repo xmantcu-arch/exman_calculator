@@ -58,7 +58,7 @@ def satisfaction_page():
     else:
         year = ["2025", "2026"]
         year_selection = year
-        selectedYear = st.pills("Select Year", year, selection_mode="multi", default="2025")
+        # selectedYear = st.pills("Select Year", year, selection_mode="multi", default="2025")
         options = ["Q1", "Q2", "Q3", "Q4"]
         default_selection = options
         selectedQuarter = st.pills("Select Quarter", options, selection_mode="multi", default=default_selection)
